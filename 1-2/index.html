@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | AI & Software Engineer</title>
+    <style>
+        /* Base Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-main: #0B0F19;
+            --bg-surface: #151A28;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --accent-cyan: #38BDF8;
+            --accent-purple: #818CF8;
+            --border-color: #1E293B;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        /* Layout & Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Single Image Banner */
+        .hero-image-container {
+            width: 100%;
+            margin-bottom: 60px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 3-Column Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background-color: var(--bg-surface);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .card h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-cyan);
+            border-radius: 2px;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        .card strong {
+            color: var(--text-primary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Personal Profile</h1>
+            <p>Computer Engineering @ ODTÜ</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="hero-image-container">
+            <img src="image.png" alt="My Profile, Skills, and Future Goals Visualized">
+        </div>
+
+        <div class="content-grid">
+            
+            <section class="card">
+                <h2>1. Who I Am</h2>
+                <p>I am a 21-year-old Computer Engineering student at Middle East Technical University (ODTÜ) driven by an analytical, detail-oriented mindset and a passion for solving complex problems.</p>
+                <p>I thrive on turning intricate challenges into efficient, elegant code, blending technical precision with creative execution.</p>
+            </section>
+
+            <section class="card">
+                <h2>2. My Skills</h2>
+                <ul>
+                    <li><strong>Programming Languages:</strong> Proficient in Python, C, C++, and JavaScript.</li>
+                    <li><strong>Artificial Intelligence:</strong> Experienced in designing and building advanced AI agents utilizing LangChain and LangGraph.</li>
+                    <li><strong>Game Development:</strong> Skilled in creating immersive, interactive experiences using the Unity game engine.</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>3. My Future Goal</h2>
+                <p>My ultimate career objective is to push the boundaries of technology as an innovative AI/Software Engineer or an impactful Game Developer, creating cutting-edge software and engaging digital experiences that make a difference.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Personal Branding Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
